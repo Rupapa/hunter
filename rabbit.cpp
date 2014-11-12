@@ -3,6 +3,7 @@ class Rabbit
   private:
   int xpos, ypos;
   int lifetime;
+  static int allRabbit, deadRabbit;
   
   public:
   void move();
@@ -49,8 +50,24 @@ check:
   }
 }
 
-void Rabbit::breed()
+void Rabbit::starve()
+{
+  if(starveTime==2)
+    delete this;
+    return;
+}
+Rabbit* Rabbit::breed()
 {
   if(lifetime%3==2)
-  int 
+    Rabbit* r = new rabbit;
+    return r;
+}
+int breedRabbit()
+{
+  int newRabbit;
+  for(int i=0; i<allRabbit; i++)
+  {
+    if(rabbit[i]!=NULL)
+    {
+      rabbit[allRabbit+i] = rabbit[i]->breed();
 }
