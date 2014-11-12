@@ -39,13 +39,6 @@ int main(void)
 	
 	while(1)
 	{
-
-	}	
-	return 0;
-}
-
-void showStatus(void)
-{
 		cout << "Time_step: " << timestep <<endl;
 		cout << endl;
 		for(i=0; i<20; i++)
@@ -63,8 +56,19 @@ void showStatus(void)
 		cout << "Press Enter to proceed.";
 		while(getchar() != '\n'){}
 		timestep++;
+	}	
+	return 0;
 }
 
-void dododo(void)
+
+
+
+int breedRabbit(Rabbit* rabbit[], int allRabbit, int bornedRabbitNum)
 {
-	
+  int newRabbit;
+  for(int i=0; i<allRabbit; i++)
+  {
+    if(rabbit[i]!=NULL)
+    {
+      rabbit[allRabbit+i] = rabbit[i]->breed();
+}
