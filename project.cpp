@@ -8,6 +8,10 @@ int main(void)
 	int rabbitNum, bornedRabbitNum, capturedRabbitNum;
 	int tigerNum, bornedTigerNum, starvedTigerNum, capturedTigerNum;
 	int hunterNum, bornedHunterNum, starvedHunterNum;
+	
+	Rabbit* rabbit[200];
+	Tiger* tiger[200];
+	Hunter* hunter[200];
 	cout << "Enter initial number of rabbits: ";
 	cin >> rabbitNum;
 	cout << "Enter initial number of tigers: ";
@@ -23,9 +27,12 @@ int main(void)
 		for(j=0; j<20; j++)
 			field[i][j] = '-';
 
-	Rabbit* rPtr = new Rabbit[rabbitNum];
-	Tiger* tPtr = new Tiger[tigerNum];
-	Hunter* hPtr = new Hunter[hunterNum];
+	for(i=0; i<rabbitNum; i++)
+		rabbit[i] = new Rabbit();
+	for(i=0; i<tigerNum; i++)
+		tiger[i] = new Tiger();
+	for(i=0; i<hunterNum; i++)
+		hunter[i] = new Hunter();
 
 	rabbitToTheField();
 	hunterTotheField();
