@@ -6,10 +6,10 @@ class Rabbit
   private:
   int xpos, ypos;
   int lifetime;
-  static int allRabbit, deadRabbit;
+  static int allRabbit, allDeadRabbit;
   
   public:
   void move();
-  void breed();
+  Rabbit* breed();
 }
 #endnif
