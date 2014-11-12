@@ -62,12 +62,4 @@ Rabbit* Rabbit::breed()
     Rabbit* r = new rabbit;
     return r;
 }
-int breedRabbit()
-{
-  int newRabbit;
-  for(int i=0; i<allRabbit; i++)
-  {
-    if(rabbit[i]!=NULL)
-    {
-      rabbit[allRabbit+i] = rabbit[i]->breed();
-}
+
