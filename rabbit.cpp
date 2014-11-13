@@ -1,5 +1,6 @@
 Rabbit::Rabbit()
 {	
+	r_all++;
 	srand(time(NULL));
 	xpos = rand()%20;
 	ypos = rand()%20;
