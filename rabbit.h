@@ -6,7 +6,7 @@ class Rabbit
   private:
   int xpos, ypos;
   int lifetime;
-  static int allRabbit, allDeadRabbit;
+  static int r_all, r_dead;
   
   public:
   void move();
