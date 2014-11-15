@@ -3,13 +3,15 @@
 
 class Rabbit
 {
-  private:
-  int xpos, ypos;
-  int lifetime;
-  static int r_all, r_dead;
+	private:
+	int xpos, ypos;
+	int lifetime;
+	static int r_all, r_dead;
   
-  public:
-  void move();
-  Rabbit* breed();
+	public:
+	Rabbit();
+	void move();
+	Rabbit* breed();
 }
-#endnif
+#endif
+
