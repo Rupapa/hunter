@@ -1,3 +1,6 @@
+#include"rabbit.h"
+extern char field[20][20];
+
 Rabbit::Rabbit()
 {	
 	r_all++;
