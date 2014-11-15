@@ -1,3 +1,6 @@
+#include"tiger.h"
+extern char field[20][20]
+
 Tiger::Tiger()
 {	
 	srand(time(NULL));
@@ -58,3 +61,40 @@ Tiger* Tiger::breed()
     return t;
 }
 
+
+int Tiger::detect_rabbit(char* field[20][20])
+{
+	if(field[xpos-1][ypos]=='R')
+	{	xpos--;
+		return 0;
+	}	 	
+	else if(field[xpos+1][ypos]=='R')
+	{	xpos++;		
+		return 1;
+	}
+	else if(field[xpos][ypos-1]=='R')
+	{	ypos--;
+		return 2;
+	}
+	else if(field[xpos][ypos+1]=='R')
+	{	return 3;
+		ypos++;
+	}
+	else
+		return 4;
+}
+
+if(fsdf==0, 1, 2, 3)
+	hunt_rabbit();
+else
+	move();
+
+
+
+void Tiger::hunt_rabbit(int pos, Rabbit* r[])
+
+Rabbit* detectRabbitAdr
+{
+	for(int i=0; i<Rabbit::r_all; i++)
+		if(r[i]->xpos==this.xpos && r[i]->ypos==this.ypos)
+			 r+i;
